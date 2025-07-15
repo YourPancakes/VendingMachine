@@ -1,0 +1,15 @@
+.cart-button {
+  padding: 12px 28px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: none;
+  background: #388e3c;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 32px;
+  transition: background 0.2s;
+}
+.cart-button:disabled {
+  background: #bdbdbd;
+  cursor: not-allowed;
+} 

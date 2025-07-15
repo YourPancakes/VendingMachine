@@ -1,0 +1,44 @@
+.coin-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.coin-denomination {
+  font-size: 18px;
+  font-weight: 500;
+  width: 40px;
+}
+.coin-btn {
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.coin-btn:disabled {
+  background: #e0e0e0;
+  cursor: not-allowed;
+}
+.coin-input-field {
+  width: 48px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px;
+}
+.coin-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #bdbdbd;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+} 

@@ -1,0 +1,52 @@
+.payment-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  background: #fff;
+  min-height: 100vh;
+}
+.payment-page h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.payment-coins {
+  margin-bottom: 32px;
+}
+.payment-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.payment-total {
+  font-size: 20px;
+  font-weight: 600;
+}
+.payment-inserted {
+  font-size: 20px;
+  font-weight: 600;
+}
+.payment-actions {
+  display: flex;
+  gap: 16px;
+}
+.payment-back, .payment-pay {
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.payment-back {
+  background: #bdbdbd;
+  color: #fff;
+}
+.payment-pay {
+  background: #388e3c;
+  color: #fff;
+}
+.payment-pay:disabled {
+  background: #e0e0e0;
+  cursor: not-allowed;
+} 
