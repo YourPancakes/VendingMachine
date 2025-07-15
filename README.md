@@ -33,7 +33,7 @@ Both services are containerized and orchestrated via Docker Compose.
 
 ## Backend (VendingMachine.Server)
 
-- **Tech:** ASP.NET Core 8, Entity Framework Core, PostgreSQL, MediatR, AutoMapper, FluentValidation
+- **Tech:** ASP.NET Core 8, Entity Framework Core, PostgreSQL, AutoMapper, FluentValidation
 - **API:**
   - `/api/v1.0/brands` — CRUD for brands
   - `/api/v1.0/products` — CRUD and filtering for products
