@@ -17,7 +17,7 @@ Both services are containerized and orchestrated via Docker Compose.
 
 1. **Clone the repository:**
    ```sh
-   git clone 
+   git clone https://github.com/YourPancakes/VendingMachine
    cd VendingMachine
    ```
 2. **Build and run all services:**
