@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: vending-machine-db
+    environment:
+      POSTGRES_DB: VendingMachine
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - vending-machine-network
+
+  vending-machine-api:
+    build:
+      context: ./VendingMachine.Server
+      dockerfile: Dockerfile
+    container_name: vending-machine-api
+    ports:
+      - "5071:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Database=VendingMachine;Username=postgres;Password=password
+      - ASPNETCORE_URLS=http://+:8080
+    depends_on:
+      - postgres
+    restart: always
+    networks:
+      - vending-machine-network
+
+  client:
+    build:
+      context: ./VendingMachine.Client/vendingmachine-client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    extra_hosts:
+      - "localhost:host-gateway"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  vending-machine-network:
+    driver: bridge
